@@ -1,42 +1,41 @@
 const Notification = (props) => {
-  const { name, children, imageClass, image } = props;
-  return (
-    <p className={name}>
-      <img className={imageClass} src={image} />
-      {children}
-    </p>
-  );
+  const { name, children } = props;
+  return <div className={name}>{children}</div>;
 };
 
 const element = (
   <div>
     <h1 className="heading">Notifications</h1>
-    <Notification
-      name="notify info"
-      imageClass="icon"
-      image="https://assets.ccbp.in/frontend/react-js/primary-icon-img.png"
-      children="Information Message"
-    />
-    <Notification
-      name="notify success"
-      imageClass="icon"
-      image="https://assets.ccbp.in/frontend/react-js/success-icon-img.png"
-      children="Success Message"
-    />
+    <Notification name="notify info">
+      <img
+        className="icon"
+        src="https://assets.ccbp.in/frontend/react-js/primary-icon-img.png"
+      />
+      Information Message
+    </Notification>
+    <Notification name="notify success">
+      <img
+        className="icon"
+        src="https://assets.ccbp.in/frontend/react-js/success-icon-img.png"
+      />
+      Success Message
+    </Notification>
 
-    <Notification
-      name="notify warning"
-      imageClass="icon"
-      image="https://assets.ccbp.in/frontend/react-js/warning-icon-img.png"
-      children="Warning Message"
-    />
+    <Notification name="notify warning">
+      <img
+        className="icon"
+        src="https://assets.ccbp.in/frontend/react-js/warning-icon-img.png"
+      />
+      Warning Message
+    </Notification>
 
-    <Notification
-      name="notify danger"
-      imageClass="icon"
-      image="https://assets.ccbp.in/frontend/react-js/danger-icon-img.png"
-      children="Error Message"
-    />
+    <Notification name="notify danger">
+      <img
+        className="icon"
+        src="https://assets.ccbp.in/frontend/react-js/danger-icon-img.png"
+      />
+      Error Message
+    </Notification>
   </div>
 );
 
